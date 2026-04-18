@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Resources | Physics & Engineering</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #1a1a1a;
+            --accent: #0056b3;
+            --border: #e0e0e0;
+            --hover: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: var(--bg);
+        }
+
+        header {
+            margin-bottom: 50px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+        }
+
+        h1 { font-weight: 600; font-size: 1.8rem; margin-bottom: 5px; }
+        p.subtitle { color: #666; font-size: 0.95rem; }
+
+        .category { margin-bottom: 40px; }
+        h2 { 
+            font-size: 1.2rem; 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+            color: #888; 
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+
+        .resource-list { list-style: none; padding: 0; }
+        
+        .resource-item {
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            margin-bottom: 10px;
+            transition: all 0.2s ease;
+        }
+
+        .resource-item:hover {
+            background-color: var(--hover);
+            border-color: var(--accent);
+        }
+
+        .resource-link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 18px;
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        .file-name { font-weight: 400; }
+        .file-meta { 
+            font-family: 'JetBrains Mono', monospace; 
+            font-size: 0.8rem; 
+            color: #999; 
+        }
+
+        footer {
+            margin-top: 80px;
+            font-size: 0.8rem;
+            color: #aaa;
+            text-align: center;
+        }
+
+        a.github-link { color: inherit; text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Academic Resources</h1>
+        <p class="subtitle">Lecture notes and course materials for Physics and Engineering.</p>
+    </header>
+
+    <section class="category">
+        <h2>Classical Physics</h2>
+        <ul class="resource-list">
+            <li class="resource-item">
+                <a href="pdfs/electrodynamics.pdf" class="resource-link">
+                    <span class="file-name">"Electromagnetism & Continuum Electrodynamics</span>
+                    <span class="file-meta">PDF • --MB</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>Maintained by Edoardo</p>
+    </footer>
+
+</body>
+</html>
