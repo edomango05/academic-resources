@@ -13,7 +13,7 @@
 
 #maketitle(
   title: "Electromagnetism & Continuum Electrodynamics",
-  authors: ("Edoardo Othman",),
+  authors: ("Edoardo Othman","Gray Gallant"),
   date: "March 2026",
 )
 
