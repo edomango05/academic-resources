@@ -1977,7 +1977,155 @@ $
 Through these absolutely fundamental temporal relations, the complete instantaneous geometric distortion of the continuous fluid, beautifully characterized by pure linear stretch, volumetric dilation, internal angular shear, and oriented surface area expansion, is perfectly encapsulated by the pure symmetric rate of deformation.
 
 == System of forces and tension
+Having profoundly established the complete kinematic landscape of fluid deformation over time, we must now philosophically pivot from the pure geometry of motion to the fundamental physical causes that actively drive that very motion. To understand exactly how a continuous fluid mathematically and mechanically interacts with its surrounding physical environment, we are logically compelled to introduce the absolute concept of force. Within the rigorous and beautiful domain of continuum mechanics, we focus our analytical gaze upon an arbitrary portion of flowing matter currently occupying a spatial domain $Omega_t$ at a specific instant in time $t$. This continuous fluid volume is intrinsically bounded by a strictly closed spatial surface $partial Omega_t$. The external forces acting upon this meticulously defined fluid element are universally categorized into two strictly distinct and fundamental families.
 
+The first profound category encompasses the forces that deeply and invisibly permeate the entire continuous matter, acting remotely upon every single internal fluid particle without requiring any direct physical contact. These are universally heralded as mass forces or volume forces, with gravitational pull or electromagnetic attractions serving as classic physical examples. They are rigorously quantified by a specific and highly continuous vector field $bold(b)$ mathematically representing the external force strictly exerted per unit of fluid mass. To brilliantly transition from a mass basis to a purely geometric spatial basis, we must multiply this deeply physical field by the instantaneous fluid mass density $rho$. By elegantly integrating this continuous volumetric force density across the entire current spatial configuration $Omega_t$, we define the total mass force majestically acting upon the fluid continuum:
+
+$
+  integral_(Omega_t) rho bold(b)
+$
+
+The second fundamental category perfectly captures the profound mechanical interactions occurring strictly at the physical boundary of the fluid element. These are precisely defined as surface forces or contact forces, fundamentally representing the microscopic push, pull, and frictional shear exerted by the adjacent contiguous fluid parcels or external solid walls directly abutting our defined domain. These continuous physical interactions are mathematically described by a highly specific surface traction vector field $bold(t)$ which strictly acts upon the oriented bounding surface and represents the intense force applied per unit of spatial area. We meticulously determine the total surface force by integrating this traction vector field over the entire closed exterior boundary surface:
+
+$
+  integral_(partial Omega_t) bold(t)
+$
+
+In strict and unwavering accordance with the fundamental principles of classical Newtonian mechanics, the absolute resultant force $bold(R)$ actively governing and manipulating the continuous fluid volume is majestically defined as the exact vector sum of the total internal mass forces and the total external contact surface forces. By brilliantly and harmoniously combining these deeply physical spatial and boundary domains, the absolute resultant force emerges as a magnificent unified equation:
+
+$
+  bold(R) = integral_(Omega_t) rho bold(b) + integral_(partial Omega_t) bold(t)
+$
+
+This beautiful, exact, and highly comprehensive mathematical expression stands as the ultimate dynamic foundation. It completely and rigorously defines the total external mechanical exertion upon the fluid domain at any given instant in time, elegantly presented without requiring the explicit notation of the underlying spatial and boundary integration differentials.
+------
+
+To profoundly understand the intimate nature of the physical interactions occurring at the bounding surface of our continuous spatial domain $Omega_t$, we must introduce the foundational postulate of Cauchy. This majestic axiom asserts that for any arbitrary point $bold(x)$ residing on an oriented boundary surface at time $t$, the microscopic contact force can be rigorously defined strictly as a localized spatial limit. This limit fundamentally depends upon the spatial location and the precise geometric orientation captured by the outward unit normal vector $bold(n)$. Thus, the Cauchy postulate elegantly defines the specific surface traction vector as a continuous spatial function:
+
+$
+  bold(t) = bold(t)(bold(x), t, bold(n))
+$
+
+Building upon this profound geometric dependence, we must mathematically prove the beautiful theorem of Hamel-Noll, which perfectly embodies the universal physical law of action and reaction. To rigorously establish this fundamental symmetry without merely asserting it, we construct a profoundly microscopic cylindrical fluid volume, an infinitesimal mathematical pillbox, strictly bisected by the oriented bounding surface at the spatial point $bold(x)$. We majestically apply the absolute balance of linear momentum to this confined domain. The continuous flowing matter must rigorously obey Newton's second law, which dictates that the volumetric integral of the mass-weighted material acceleration $dv(bold(u), t)$ minus the volumetric mass forces $bold(b)$ must perfectly equal the total sum of the surface tractions. Let $A$ be the spatial area of the pillbox faces and $h$ be its geometric thickness. As we mercilessly collapse the thickness $h$ towards absolute zero, the spatial volume strictly and fundamentally vanishes. Consequently, all continuous volumetric integrals containing the finite inertial acceleration $dv(bold(u), t)$ and the mass forces $bold(b)$ absolutely shrink to the null vector. Furthermore, the continuous surface integral evaluated over the vanishing lateral cylindrical walls identically goes to zero as their bounding area disappears. We are left solely with the absolute mechanical equilibrium of the two strictly opposing circular faces. This rigorous mathematical limit definitively demands that the local traction acting upon the positively oriented face must be exactly balanced by the local traction acting upon the perfectly reversed negatively oriented face, flawlessly yielding the fundamental theorem of Hamel-Noll:
+
+$
+  bold(t)(bold(x), t, -bold(n)) = -bold(t)(bold(x), t, bold(n))
+$
+
+To reach the ultimate pinnacle of continuum dynamics, we must now mathematically prove the magnificent theorem of Cauchy using a rigorously constructed tetrahedral geometry. This profoundly elegant geometric proof will organically demand and strictly authorize the formal mathematical existence of the stress tensor. Consider an infinitesimally small fluid tetrahedron $cal(T)$ carefully isolated exactly at the spatial point $bold(x)$ within our continuous spatial domain $Omega_t$. Let this infinitesimal geometry feature three mutually orthogonal internal faces with spatial areas $A_i$ and strict outward normal vectors $-bold(e)_1$, $-bold(e)_2$, and $-bold(e)_3$ perfectly aligned with the negative Cartesian coordinate axes. The fourth inclined bounding face possesses a spatial area $A$ and an arbitrary outward unit normal vector $bold(n)$. By pure geometric projection, fundamentally derived from the absolute properties of the vector cross product, the spatial areas of the strictly orthogonal faces are beautifully and unassailably related to the main inclined area through the precise directional cosines:
+
+$
+  A_i = A (bold(n) dot bold(e)_i)
+$
+
+Armed with this precise geometric truth, we mathematically impose the absolute conservation of linear momentum upon our microscopic fluid tetrahedron. Let $h$ represent the characteristic linear dimension of this fragile geometry. The total dynamic resultant of the surface tractions acting on the four oriented bounding faces is mathematically equated to the spatial volumetric integral of the internal inertial and mass terms:
+
+$
+  integral_(partial cal(T)) bold(t) = integral_(cal(T)) rho (dv(bold(u), t) - bold(b))
+$
+
+To beautifully isolate the specific dynamic state exactly at the localized spatial point $bold(x)$, we divide this entire magnificent dynamic equation by the scalar area of the inclined bounding face $A$, which rigorously scales as the square of the characteristic length $O(h^2)$. As the fluid tetrahedron infinitesimally shrinks towards the absolute mathematical point $bold(x)$, sending $h$ to zero, the volumetric terms strictly scale as a cubic mathematical function $O(h^3)$. Thus, their specific fractional ratio with the bounding area mercilessly and unconditionally collapses to zero, completely eliminating the dynamic influence of the continuous volumetric mass forces and the finite inertial material accelerations. By continuously applying the mathematical mean value theorem for integrals over the shrinking areas, the exact localized tractions strictly emerge, leaving us in absolute geometric and physical equilibrium:
+
+$
+  bold(t)(bold(n)) A + sum_(i=1)^3 bold(t)(-bold(e)_i) A_i = bold(0)
+$
+
+By seamlessly invoking our freshly proven theorem of Hamel-Noll, we flawlessly transition the negative normal vectors of the internal orthogonal faces to strictly positive outward representations. This magnificent mathematical maneuver allows us to elegantly transport the entire summation to the opposite side of our strict equality:
+
+$
+  bold(t)(bold(n)) A = sum_(i=1)^3 bold(t)(bold(e)_i) A_i
+$
+
+We can now rigorously substitute our precise geometric area projections directly into this absolute equilibrium equation. By dividing the entire expression by the common scalar area $A$, we brilliantly and unequivocally isolate the exact specific traction acting on the arbitrarily inclined fluid surface:
+
+$
+  bold(t)(bold(n)) = sum_(i=1)^3 bold(t)(bold(e)_i) (bold(n) dot bold(e)_i)
+$
+
+At this exact, profound mathematical junction, we must rigorously define the Cauchy stress tensor $bold(T)$. We formally and majestically declare $bold(T)$ as the absolute second-order spatial tensor whose precise column components are utterly and completely constructed from the fundamental traction vectors strictly acting upon the three orthogonal Cartesian coordinate faces. By flawlessly assembling these basis tractions through the mathematical dyadic tensor product $times.o$, we establish its ultimate foundation:
+
+$
+  bold(T)(bold(x), t) := sum_(i=1)^3 bold(t)(bold(e)_i) times.o bold(e)_i
+$
+
+The fundamental algebraic property of this newly defined continuous spatial tensor guarantees that its linear geometric application onto any primary basis vector exactly yields the physical traction vector fundamentally associated with that specific spatial coordinate plane. By directly substituting this majestic tensor strictly into our derived linear summation, we spectacularly arrive at the absolute culmination of the theorem of Cauchy. This flawlessly proves that the specific contact force acting on any arbitrarily inclined continuous spatial surface within the flowing matter is profoundly and simply a pure linear transformation of the outward normal vector:
+
+$
+  bold(t)(bold(x), t, bold(n)) = bold(T)(bold(x), t) bold(n)
+$
+
+This absolute fundamental truth unconditionally transforms our complex boundary analysis, elegantly uniting the pure geometry of the fluid surface with the profound internal physical forces of continuum dynamics.
+Having triumphantly established the absolute geometric reality of the stress tensor, we must now seamlessly elevate our mathematical narrative to the fundamental axioms of dynamic conservation. The continuous flowing matter is unconditionally bound by the universal laws of classical mechanics, primarily dictated by the absolute conservation of linear momentum. This profound physical decree demands that the material time derivative of the total momentum enclosed within our arbitrary spatial fluid volume $Omega_t$ must be perfectly balanced by the resultant sum of all external body forces and boundary surface tractions acting upon it. By entirely suppressing the integration measures to elegantly focus on the pure continuous fields, we mathematically formalize this grand equilibrium over the current spatial configuration using the explicit material derivative operator $Dm(dots)$ for the rate of change:
+
+$
+  dv(,t) integral_(Omega_t) rho bold(u) = integral_(Omega_t) rho bold(b) + integral_(partial Omega_t) bold(t)(bold(x), t, bold(n))
+$
+
+To conquer this global dynamic expression and extract its internal local truth, we must elegantly transport the temporal derivative completely inside the spatial volumetric integral. By masterfully applying the Reynolds transport theorem and invoking the universal principle of mass conservation, which mathematically guarantees that the total mass of any tracked fluid parcel remains eternally invariant, we can cleanly shift the temporal derivative directly onto the spatial velocity field $bold(u)$, thereby yielding the mass-weighted material acceleration $Dm(bold(u))$. Simultaneously, we seamlessly substitute our previously proven Cauchy relationship, $bold(t) = bold(T) bold(n)$, into the boundary integral. To resolve the geometric disparity between the volume and its bounding surface, we unleash the magnificent divergence theorem of Gauss, perfectly converting the flux of the stress tensor across the closed exterior boundary into the purely volumetric integral of its spatial divergence:
+
+$
+  integral_(Omega_t) rho Dm(bold(u)) = integral_(Omega_t) rho bold(b) + integral_(Omega_t) div bold(T)
+$
+
+By harmoniously gathering all these continuous fields beneath a single encompassing spatial integral, we expose the absolute mechanical balance of the continuum:
+
+$
+  integral_(Omega_t) (rho Dm(bold(u)) - rho bold(b) - div bold(T)) = bold(0)
+$
+
+Because our chosen fluid domain $Omega_t$ is entirely arbitrary and this dynamic equilibrium must unconditionally hold for every conceivable microscopic parcel within the continuous medium, the fundamental localization theorem forcefully dictates that the continuous integrand itself must universally vanish at every absolute point in space. This profound mathematical deduction gifts us the local differential equation of motion, universally heralded as Cauchy's first law of motion:
+
+$
+  rho Dm(bold(u)) = rho bold(b) + div bold(T)
+$
+
+We must immediately follow this majestic triumph by analyzing the rotational mechanics of the continuous fluid, which are strictly governed by the conservation of angular momentum. This second physical axiom postulates that the material time derivative of the total angular momentum must exactly equal the resultant moment of all applied mass and surface forces, evaluated with respect to the spatial origin. Using the absolute positional vector $bold(x)$, we mathematically formulate this rotational equilibrium as:
+
+$
+  dv(,t)integral_(Omega_t) bold(x) times rho bold(u) = integral_(Omega_t) bold(x) times rho bold(b) + integral_(partial Omega_t) bold(x) times (bold(T) bold(n))
+$
+
+We fiercely attack the left side of this equation by passing the material time derivative through the integral using the very same constant-mass logic dictated by the transport theorem. We then rigorously apply the product rule to the cross product between the position vector and the velocity vector:
+
+$
+  integral_(Omega_t) rho Dm(bold(x) times bold(u)) = integral_(Omega_t) rho ( Dm(bold(x)) times bold(u) + bold(x) times Dm(bold(u)) )
+$
+
+Since the material time derivative of the spatial position $bold(x)$ is, by absolute fundamental definition, the local velocity field $bold(u)$ (such that $Dm(bold(x)) = bold(u)$), the first term beautifully evaluates the cross product of the velocity with itself, identically yielding the null vector. Consequently, the entire dynamic rate of angular momentum strictly simplifies to:
+
+$
+  integral_(Omega_t) bold(x) times rho Dm(bold(u))
+$
+
+We must now rigorously evaluate the surface moment integral by employing Cartesian index notation and the Levi-Civita permutation symbol $epsilon_(i j k)$ to properly manage the complex tensor multiplications. By converting this geometric surface projection into a spatial volume integral through another masterful application of the divergence theorem, we meticulously execute the spatial derivative $partial_m$ on the inner product using the standard chain rule:
+
+$
+  integral_(partial Omega_t) epsilon_(i j k) x_j T_(k m) n_m = integral_(Omega_t) partial_m (epsilon_(i j k) x_j T_(k m)) = integral_(Omega_t) epsilon_(i j k) (partial_m x_j) T_(k m) + integral_(Omega_t) epsilon_(i j k) x_j partial_m T_(k m)
+$
+
+Recognizing that the strict spatial derivative of a specific coordinate beautifully resolves to the Kronecker delta ($partial_m x_j = delta_(j m)$), this rigorous expansion flawlessly collapses into two highly distinct volumetric terms. The second term perfectly reconstructs the cross product between the position vector and the divergence of the stress tensor. The first term evaluates to $epsilon_(i j k) delta_(j m) T_(k m) = epsilon_(i j k) T_(k j)$, which mathematically extracts the purely antisymmetric components of the stress tensor into a dual axial vector, which we shall formally denote as $bold(t)_text("anti")$. Returning to our absolute vector notation, this perfectly translates to:
+
+$
+  integral_(partial Omega_t) bold(x) times (bold(T) bold(n)) = integral_(Omega_t) (bold(x) times div bold(T)) + integral_(Omega_t) bold(t)_text("anti")
+$
+
+We can now majestically assemble the complete angular momentum balance by equating our simplified inertial term to the combined volumetric moments. By elegantly algebraically rearranging the equation and beautifully factoring out the cross product of the spatial position vector, we expose a deeply familiar internal structure:
+
+$
+  integral_(Omega_t) bold(x) times (rho Dm(bold(u)) - rho bold(b) - div bold(T)) - integral_(Omega_t) bold(t)_text("anti") = bold(0)
+$
+
+We immediately and profoundly recognize that the entire expression bounded within the parenthesis is exactly the local linear momentum balance proven just moments ago. According to Cauchy's first law, this specific combination identically vanishes everywhere, perfectly eliminating the vast majority of our complex dynamic equation and leaving only the isolated integral of the antisymmetric dual vector:
+
+$
+  integral_(Omega_t) bold(t)_text("anti") = bold(0)
+$
+
+Because our original fluid volume is absolutely arbitrary, the continuous mathematical localization theorem once again forces this condition to hold locally, demanding that the axial vector strictly vanish at every conceivable spatial location. This mathematical truth definitively proves that the Cauchy stress tensor possesses strictly zero antisymmetric parts, rendering it an unconditionally and universally symmetric tensor. This profound final proof is universally heralded as Cauchy's second law of motion, representing a majestic and unassailable pillar of continuum mechanics:
+
+$
+  bold(T) = bold(T)^T
+$
 = Electrodynamics in dissipative media
 = Electro-hydrodynamics
 = Magneto-hydrodynamics
