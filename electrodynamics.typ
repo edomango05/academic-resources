@@ -225,26 +225,6 @@ The negative sign ensures that the lowest energy state occurs when the vectors a
 If the field is non-uniform (stronger in one spot than another), a new phenomenon occurs: translation.
 Because one end of the dipole is in a stronger field than the other, the forces no longer cancel out. The dipole will experience a net force pulling it toward the region of stronger field. This is why a neutral object like a piece of paper can be attracted to a charged comb; the comb creates a non-uniform field that induces and then pulls on the dipoles within the paper.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #pagebreak()
 #pagebreak()
 = Materials in equilibrium
@@ -1853,7 +1833,7 @@ $
 Moving forward in our profound exploration, we shall purposefully avoid explicitly introducing the smallness parameter $epsilon$ at every analytical turn, and instead implicitly neglect all superlinear time increments governed by $dif t$. Under this rigorous infinitesimal assumption over time, the profound rate of deformation elegantly emerges from evaluating the metric variation tensor:
 
 $
-  bold(D)(bold(x), t) dif t = 1/2 (bold(C)_t (t + dif t) - bold(I)) = 1/2 (bold(L)(bold(x), t) + bold(L)^top (bold(x), t)) dif t
+  bold(E)(bold(x), t) dif t = 1/2 (bold(C)_t (t + dif t) - bold(I)) = 1/2 (bold(L)(bold(x), t) + bold(L)^top (bold(x), t)) dif t
 $
 
 By isolating the instantaneous rate, this fundamentally derived tensor, precisely defined as the symmetric component of the velocity gradient, is heralded as the _rate of deformation tensor_ (tensore della velocita di deformazione):
@@ -1963,7 +1943,7 @@ $
 Let us now consider the instantaneous angular distortion occurring within the flowing matter, a complex phenomenon intrinsically linked to internal fluid shear. Imagine two infinitesimal fluid line segments currently aligned with two perfectly orthogonal unit direction vectors $bold(t)_1$ and $bold(t)_2$. As the continuous matter flows and deforms, the pristine right angle initially separating these specific material lines will inexorably change. By rigorously evaluating the time derivative of the geometric angle bounded between these vectors, we discover that the instantaneous rate of angular variation $theta$ is beautifully expressed as:
 
 $
-  dv(theta, t) = - 2 bold(t)_1 dot bold(D)(bold(x), t) bold(t)_2
+  dv(theta, t) = - 2 bold(t)_1 dot bold(E)(bold(x), t) bold(t)_2
 $
 
 This elegant mathematical relation demonstrates that pure fluid shear is physically realized and strictly quantified through the cross directional interactions mapped by the tensor $bold(E)$.
@@ -1998,7 +1978,7 @@ $
 $
 
 This beautiful, exact, and highly comprehensive mathematical expression stands as the ultimate dynamic foundation. It completely and rigorously defines the total external mechanical exertion upon the fluid domain at any given instant in time, elegantly presented without requiring the explicit notation of the underlying spatial and boundary integration differentials.
-------
+
 
 To profoundly understand the intimate nature of the physical interactions occurring at the bounding surface of our continuous spatial domain $Omega_t$, we must introduce the foundational postulate of Cauchy. This majestic axiom asserts that for any arbitrary point $bold(x)$ residing on an oriented boundary surface at time $t$, the microscopic contact force can be rigorously defined strictly as a localized spatial limit. This limit fundamentally depends upon the spatial location and the precise geometric orientation captured by the outward unit normal vector $bold(n)$. Thus, the Cauchy postulate elegantly defines the specific surface traction vector as a continuous spatial function:
 
@@ -2126,6 +2106,134 @@ Because our original fluid volume is absolutely arbitrary, the continuous mathem
 $
   bold(T) = bold(T)^T
 $
+
+Having triumphantly established the unconditionally symmetric nature of the Cauchy stress tensor $bold(T)$ via the conservation of angular momentum, we must now philosophically and mathematically pivot toward the profound material reality of the fluid itself. The universal laws of motion govern all continuous matter, but they remain intrinsically blind to the specific physical constitution of the flowing substance. To rigorously bridge this gap, we must formulate the constitutive laws. We begin by formally invoking the Principle of Determinism and Local Action. For a simple viscous fluid, the stress tensor at any absolute spatial point $bold(x)$ and time $t$ is postulated to depend strictly upon the instantaneous local thermodynamic state---represented by the mass density $rho$ and the absolute temperature $theta$---and the local kinematic state, captured entirely by the spatial velocity gradient $bold(L) = nabla bold(u)$. Thus, we assert our initial constitutive functional:
+
+$ bold(T) = hat(bold(T))(rho, theta, bold(L)) $
+
+However, this broad mathematical assertion must be fiercely disciplined by the Principle of Material Frame-Indifference, or objectivity. This profound absolute axiom dictates that the internal mechanical stresses generated within the flowing matter cannot depend upon the arbitrary rigid-body rotation or translation of the observer's reference frame. Let us introduce a change of observer defined by a time-dependent proper orthogonal rotation tensor $bold(Q)(t)$ and a translation vector $bold(c)(t)$, mapping the current position to a new frame:
+
+$ bold(x)^* = bold(Q)(t) bold(x) + bold(c)(t) $
+
+Taking the material time derivative to determine the velocity in the new frame yields:
+
+$ bold(u)^* = bold(Q) bold(u) + dot(bold(Q)) bold(x) + dot(bold(c)) $
+
+By applying the spatial gradient to this transformed velocity, we find that the velocity gradient $bold(L)$ transforms under a change of observer as:
+
+$ bold(L)^* = bold(Q) bold(L) bold(Q)^T + dot(bold(Q)) bold(Q)^T $
+
+The presence of the term $dot(bold(Q)) bold(Q)^T$, which represents the skew-symmetric angular velocity tensor of the rotating frame, unequivocally proves that the velocity gradient $bold(L)$ is not an objective tensor. To resolve this profound violation, we must mathematically decompose $bold(L)$ into its symmetric part, the rate of deformation tensor $bold(D) = 1/2 (bold(L) + bold(L)^T)$, and its antisymmetric part, the spin tensor $bold(W) = 1/2 (bold(L) - bold(L)^T)$. Applying the transformation laws specifically to these decomposed tensors reveals:
+
+$ bold(D)^* &= bold(Q) bold(D) bold(Q)^T \
+  bold(W)^* &= bold(Q) bold(W) bold(Q)^T + dot(bold(Q)) bold(Q)^T $
+
+Because the spin tensor $bold(W)$ absorbs the non-objective rotational term, it intrinsically changes under a rotating observer and must be categorically discarded from the constitutive relation. Consequently, the stress function must strictly and exclusively depend upon the purely objective rate of deformation tensor $bold(D)$:
+
+$ bold(T) = hat(bold(T))(rho, theta, bold(D)) $
+
+Furthermore, we rigorously acknowledge that when the fluid achieves a state of absolute mechanical rest ($bold(D) = bold(0)$), all internal friction ceases, and the stress must completely collapse into the purely reversible thermodynamic hydrostatic pressure $p(rho, theta)$. Therefore, we majestically separate the total stress tensor into this spherical pressure component and an irreversible viscous stress tensor $bold(tau)$:
+
+$ bold(T) = -p bold(I) + bold(tau)(rho, theta, bold(D)) $
+
+To progress toward the Newtonian regime, we must mathematically impose the fundamental axiom of Material Isotropy. Fluids inherently lack any internal crystalline structure and thus exhibit absolutely no preferred directional orientation. The mathematical representation of $bold(tau)$ must therefore be a purely isotropic tensor function of the symmetric tensor $bold(D)$. By rigorously invoking the Representation Theorem for Isotropic Tensor Functions, we are absolutely guaranteed that $bold(tau)$ can be expanded as a quadratic polynomial in $bold(D)$:
+
+$ bold(tau) = alpha_0 bold(I) + alpha_1 bold(D) + alpha_2 bold(D)^2 $
+
+Here, the scalar coefficients $alpha_0$, $alpha_1$, and $alpha_2$ are strictly functions of the local thermodynamic state and the three principal invariants of $bold(D)$ (namely $I_D$, $I I_D$, and $I I I_D$). For a fluid manifesting a strictly linear viscous response---the defining hallmark of a Newtonian fluid---we categorically discard the nonlinear tensor term $bold(D)^2$ by setting $alpha_2 = 0$. We further linearize the remaining coefficients by assuming $alpha_1$ is a mere constant, the dynamic viscosity $mu$, and $alpha_0$ is linearly proportional to the first principal invariant, $I_D = upright(tr)(bold(D)) = nabla dot bold(u)$, scaled by the second viscosity coefficient $lambda$. This brilliant mathematical reduction yields:
+
+$ bold(tau) = lambda (nabla dot bold(u)) bold(I) + 2 mu bold(D) $
+
+Directly substituting this strictly linear, objective, and isotropic constitutive law back into our fundamental stress decomposition flawlessly generates the absolute foundational equation for a linearly viscous continuum:
+
+$ bold(T) = (-p + lambda (nabla dot bold(u))) bold(I) + 2 mu bold(D) $
+
+At this profound conceptual summit, we must fiercely analyze the volumetric mechanics of the fluid by examining the mechanical pressure $hat(p)$, defined precisely as the negative mean normal stress: $hat(p) = -1/3 upright(tr)(bold(T))$. By applying the trace operator across our majestic constitutive equation, and noting that $upright(tr)(bold(I)) = 3$, we systematically derive the exact thermodynamic disparity:
+
+$ hat(p) = p - (lambda + 2/3 mu) nabla dot bold(u) $
+
+The clustered scalar term $zeta = lambda + 2/3 mu$ represents the bulk viscosity. This specific material parameter embodies the internal dissipative resistance against pure volumetric dilation or compression occurring at a finite rate. To achieve ultimate mathematical elegance and absolute physical closure, we invoke the legendary hypothesis of George Gabriel Stokes. Stokes profoundly postulated that for monoatomic gases and the vast majority of practical engineering flows, the internal dilational friction is strictly negligible, formally commanding $zeta = 0$. This bold, uncompromising, and highly verified assumption elegantly locks the two viscosity coefficients into a singular physical reality:
+
+$ lambda = -2/3 mu $
+
+By flawlessly substituting this absolute Stokesian relationship into our continuous formulation, the constitutive law for the fluid stress tensor reaches its unparalleled mathematical climax:
+
+$ bold(T) = -p bold(I) + 2 mu (bold(D) - 1/3 (nabla dot bold(u)) bold(I)) $
+
+This final, rigorous expression unconditionally seals the continuum dynamic framework. It guarantees material frame-indifference, satisfies the axioms of local action and isotropy, and provides the exact mathematical closure required to birth the legendary Navier-Stokes equations, perfectly marrying the absolute laws of physical conservation with the intrinsic internal reality of the flowing matter.
+Armed with the absolute, definitive constitutive equation for a Newtonian continuum operating under the Stokes hypothesis, we must now propel our mathematical journey toward its ultimate dynamic destiny. To explicitly bridge the intrinsic material resistance to the universal laws of motion, we must rigorously compute the spatial divergence of the Cauchy stress tensor, $div bold(T)$. This majestic differential operation unconditionally quantifies the net internal contact forces actively acting upon any arbitrary infinitesimal fluid parcel. We begin by formally recalling our derived constitutive law, beautifully adapted to our strictly defined spatial operators:
+
+$ bold(T) = -p bold(I) + 2 mu bold(D) - 2/3 mu (div bold(u)) bold(I) $
+
+Let us meticulously analyze the divergence of this magnificent expression term by term, projecting the tensor field into a pure spatial vector field. The total divergence is mathematically distributed across the thermodynamic and viscous components:
+
+$ div bold(T) = div (-p bold(I)) + div (2 mu bold(D)) - div (2/3 mu (div bold(u)) bold(I)) $
+
+First, we profoundly recognize that the divergence of the isotropic pressure tensor strictly evaluates to the negative spatial gradient of the thermodynamic pressure field. This represents the fundamental driving force of fluid motion, unconditionally pushing the continuum from regions of high compression to absolute low pressure:
+
+$ div (-p bold(I)) = -grad p $
+
+Next, we fiercely attack the purely viscous terms. By mathematically asserting that the dynamic viscosity $mu$ is strictly homogeneous across the spatial domain---a profound yet common assumption for non-extreme thermal gradients---we can elegantly pull this scalar constant entirely outside the differential operator. We must now expand the rate of deformation tensor $bold(D)$ back into its primitive kinematic components, $1/2 (grad bold(u) + (grad bold(u))^T)$:
+
+$ div (2 mu bold(D)) = mu div (grad bold(u) + (grad bold(u))^T) $
+
+By deeply exploiting the absolute linear properties of the spatial derivative, we flawlessly execute the divergence operator. The divergence of the spatial velocity gradient $grad bold(u)$ universally yields the vector Laplacian of the velocity field, $nabla^2 bold(u)$. Simultaneously, by reversing the order of differentiation via Clairaut's theorem, the divergence of the transposed gradient meticulously generates the spatial gradient of the velocity divergence, $grad(div bold(u))$. (As a profound geometric aside, we must acknowledge that while the symmetric part of the velocity gradient governs this viscous dissipation, the antisymmetric part profoundly dictates the macroscopic rotation of the fluid parcel. This rigid-body rotation is mathematically commanded by the vorticity vector, strictly defined by the curl of the velocity field, $curl bold(u)$, though its direct contribution vanishes in the symmetric stress divergence.) Thus, the internal shear stress divergence elegantly resolves to:
+
+$ mu div (grad bold(u) + (grad bold(u))^T) = mu nabla^2 bold(u) + mu grad (div bold(u)) $
+
+Furthermore, we rigorously apply the divergence operator to our final isotropic dilational tensor. Because the divergence of a scalar multiplied by the identity tensor translates directly into the gradient of that scalar, this term gracefully simplifies:
+
+$ div (-2/3 mu (div bold(u)) bold(I)) = -2/3 mu grad (div bold(u)) $
+
+By harmoniously assembling these meticulously derived differential fragments, we construct the total spatial divergence of the stress tensor. The two terms sharing the gradient of the divergence algebraically combine in absolute perfection ($1 - 2/3 = 1/3$), yielding the complete representation of internal forces:
+
+$ div bold(T) = -grad p + mu nabla^2 bold(u) + 1/3 mu grad (div bold(u)) $
+
+We have now reached the absolute pinnacle of classical fluid dynamics. We must majestically substitute this explicit spatial divergence directly back into Cauchy's first law of motion, replacing the abstract stress divergence with our deeply material Newtonian reality. The fundamental equilibrium dictates that the mass-weighted material acceleration $rho Dm(bold(u))$ must perfectly balance the external and internal forces. By formally expanding the material time derivative $Dm(bold(u))$ into its strictly localized temporal rate of change $pdv(bold(u), t)$ and its deeply nonlinear convective acceleration $(grad(bold(u)))bold(u)$, we unveil the ultimate mathematical truth:
+
+$ rho Dm(bold(u)) = rho (pdv(bold(u), t) + (grad bold(u) )bold(u)) $
+
+Equating this majestic kinematic acceleration to our derived force balances, we forge the legendary compressible Navier-Stokes equations:
+
+$ rho (pdv(bold(u), t) + (grad bold(u))bold(u)) = rho bold(b) - grad p + mu nabla^2 bold(u) + 1/3 mu grad (div bold(u)) $
+
+This breathtakingly complex system of nonlinear partial differential equations stands as a monolithic triumph of continuum mechanics. It unconditionally balances the fluid's inherent inertia against the external volumetric forces $rho bold(b)$, the isotropic pressure gradients $-grad p$, the diffusive viscous dissipation $mu nabla^2 bold(u)$, and the internal resistance to volumetric expansion $1/3 mu grad (div bold(u))$. To witness this equation in its most classical and heavily utilized form, we must impose the absolute mathematical restriction of incompressibility. If the flowing matter strictly preserves its volume, the kinematic continuity equation demands that the velocity field be purely solenoidal, meaning its divergence identically vanishes everywhere in space ($div bold(u) = 0$). Under this uncompromising physical decree, the entire dilational term is mercilessly annihilated, reducing this magnificent dynamical balance to the purely incompressible Navier-Stokes equations:
+
+$ rho (pdv(bold(u), t) + (grad bold(u))bold(u)) = rho bold(b) - grad p + mu nabla^2 bold(u) $
+
+To achieve ultimate mathematical completeness and to arm the rigorous theoretician for advanced computational implementation, we must majestically recast these sovereign equations into Cartesian index notation. By unconditionally invoking the Einstein summation convention---whereby any repeated spatial index fundamentally implies a summation over the three orthogonal coordinate directions---we fiercely strip away the abstract vector operators to expose the explicit algebraic skeleton of the continuum. Let the coordinate directions be denoted by $x_i$, and the corresponding velocity components by $u_i$. The total symmetric Cauchy stress tensor $T_(i j)$, rigorously defined under the Stokes hypothesis, is mathematically written as:
+
+$ T_(i j) = -p delta_(i j) + mu (pdv(u_i, x_j) + pdv(u_j, x_i)) - 2/3 mu pdv(u_k, x_k) delta_(i j) $
+
+where $delta_(i j)$ is the absolute Kronecker delta tensor, acting as the discrete identity matrix. By explicitly taking the spatial divergence $pdv(T_(i j), x_j)$ and substituting it into the local momentum balance, the fully compressible Navier-Stokes equations majestically emerge in index form:
+
+$ rho (pdv(u_i, t) + u_j pdv(u_i, x_j)) = rho b_i - pdv(p, x_i) + pdv(, x_j) [ mu (pdv(u_i, x_j) + pdv(u_j, x_i)) - 2/3 mu pdv(u_k, x_k) delta_(i j) ] $
+
+By ruthlessly enforcing the condition of uniform dynamic viscosity and executing the spatial derivatives, the exact scalar representation for the $i$-th momentum component simplifies, naturally incorporating the scalar Laplacian $nabla^2 u_i$ to profoundly represent the viscous diffusion:
+
+$ rho (pdv(u_i, t) + u_j pdv(u_i, x_j)) = rho b_i - pdv(p, x_i) + mu nabla^2 u_i + 1/3 mu pdv(u_k, x_i, x_k) $
+
+Finally, under the absolute decree of incompressibility, the divergence of the velocity field $pdv(u_k, x_k)$ inherently vanishes. This pristine condition effortlessly truncates the system, leaving the unparalleled and beautifully concentrated incompressible Navier-Stokes equations in their purest, most elemental index form:
+
+$ rho (pdv(u_i, t) + u_j pdv(u_i, x_j)) = rho b_i - pdv(p, x_i) + mu nabla^2 u_i $
+
+This supreme tensor notation provides absolute, unassailable clarity, rigorously defining every microscopic convective transfer of momentum and every localized gradient of viscous diffusion, flawlessly capturing the universal laws that govern all flowing matter.
+== Continuum Thermodynamics
+Having triumphantly established the dynamical balance of forces within the fluid, we must now pivot our philosophical and mathematical gaze toward the profound thermal reality of the continuum. To complete our grand macroscopic description, the purely mechanical framework must be unconditionally enriched by the laws of thermodynamics, marrying the kinematics of flow with the chaotic, microscopic agitation of the matter itself. We must first rigorously establish how thermodynamic measures are defined uniformly within an arbitrary, infinitesimal fluid parcel. We invoke the profound axiom of local thermodynamic equilibrium. Although a flowing continuum is inherently in a macroscopic state of non-equilibrium, we mathematically postulate that if we isolate a fluid parcel, microscopically vast enough to encompass a statistically supreme number of molecules, yet macroscopically infinitesimal enough to act as a singular continuous point, the localized molecular collisions occur with such overwhelming rapidity that the parcel instantaneously reaches a state of internal thermal uniformity. Consequently, the global, extensive thermodynamic properties of the bulk substance are mathematically reduced to continuous, strictly localized scalar fields. By uniformly normalizing these extensive measures by the mass of the fluid parcel, we birth the specific thermodynamic variables. We define the mass density $rho$ and its absolute inverse, the specific volume $v = 1/rho$, representing the local spatial void occupied by a unit mass. Concurrently, we introduce the specific entropy $eta$, which unconditionally quantifies the localized microscopic disorder and the arrow of irreversible dissipation within the flowing matter. These perfectly smooth fields systematically anchor the thermodynamic state at every absolute coordinate in space and time. Beyond the macroscopic kinetic energy derived from the observable velocity field $bold(u)$, the fluid parcel harbors a deeply concealed reservoir of energy. We rigorously define the specific internal energy $epsilon$ as the continuous macroscopic manifestation of all microscopic thermal agitation, molecular translation, and latent intermolecular bonding potentials. This intrinsic scalar field $epsilon(bold(x), t)$ is fundamentally decoupled from the bulk rigid-body motion and serves as the absolute core of the continuum's thermodynamic existence. To mathematically govern this internal reality, we must formulate a profound constitutive equation, the fundamental equation of state. According to the foundational postulates of classical thermodynamics for a simple compressible substance, the localized internal energy is uniquely and entirely determined by exactly two independent, intensive state variables. By electing the specific entropy $eta$ and the specific volume $v$ as our absolute independent variables, we mathematically forge the supreme fundamental relation:
+
+$ epsilon = hat(epsilon)(eta, v) $
+
+This magnificent constitutive law completely encapsulates the thermodynamic identity of the fluid. From this singular, sovereign scalar function, all other intensive thermodynamic properties can be rigorously derived through the absolute power of partial differentiation. By taking the exact total differential of this fundamental relation, we mathematically reconstruct the celebrated Gibbs equation, unconditionally linking the differential changes in the specific internal energy to the microscopic heat transfer and the reversible volumetric work:
+
+$ dif epsilon = theta.alt dif eta - p dif v $
+
+Within this majestic differential structure, the conjugate thermodynamic variables majestically emerge as precise partial derivatives of the internal energy functional. The absolute thermodynamic temperature $theta.alt$ is rigorously defined as the rate of change of internal energy with respect to entropy at a strictly constant specific volume:
+
+$ theta.alt = (pdv(epsilon, eta))_v $
+
+Simultaneously, the absolute thermodynamic pressure $p$ unconditionally manifests as the negative rate of change of internal energy with respect to the specific volume at a strictly constant entropy, perfectly aligning with the mechanical pressure in our previously derived fluid equilibrium:
+
+$ p = - (pdv(epsilon, v))_eta $
 = Electrodynamics in dissipative media
 = Electro-hydrodynamics
 = Magneto-hydrodynamics
